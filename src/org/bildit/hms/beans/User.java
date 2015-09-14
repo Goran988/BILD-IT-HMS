@@ -16,8 +16,8 @@ public class User {
 	private String idNumber;
 	private short age;
 	private int roomNumber;
-	private char roomType;
-	private Date timeRegistered;
+	private Date checkInDate;
+	private Date checkOutDate;
 	private String username;
 	private String userPassword;
 	private boolean isActiveGuest;
@@ -32,7 +32,7 @@ public class User {
 
 	// constructor that sets values for datafields
 	public User(String firstName, String lastName, char gender,
-			String idNumber, short age, int roomNumber, char roomType,
+			String idNumber, short age, int roomNumber,
 			String username, String userPassword, byte role) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -40,13 +40,29 @@ public class User {
 		this.idNumber = idNumber;
 		this.age = age;
 		this.roomNumber = roomNumber;
-		this.roomType = roomType;
 		this.username = username;
 		this.userPassword = userPassword;
-		this.timeRegistered = new Date();
+		this.checkInDate = new Date();
 		this.role = role;
-		// by registering a new user assume he will be a guest for the time being
+		// by registering a new user assume he will be a guest for the time
+		// being
 		isActiveGuest = true;
+	}
+
+	public final Date getCheckInDate() {
+		return checkInDate;
+	}
+
+	public final void setCheckInDate(Date checkInDate) {
+		this.checkInDate = checkInDate;
+	}
+
+	public final Date getCheckOutDate() {
+		return checkOutDate;
+	}
+
+	public final void setCheckOutDate(Date checkOutDate) {
+		this.checkOutDate = checkOutDate;
 	}
 
 	public String getFirstName() {
@@ -105,21 +121,6 @@ public class User {
 		this.roomNumber = roomNumber;
 	}
 
-	public char getRoomType() {
-		return roomType;
-	}
-
-	public void setRoomType(char roomType) {
-		this.roomType = roomType;
-	}
-
-	public Date getTimeRegistered() {
-		return timeRegistered;
-	}
-
-	public void setTimeRegistered(Date timeRegistered) {
-		this.timeRegistered = timeRegistered;
-	}
 
 	public String getUsername() {
 		return username;
