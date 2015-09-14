@@ -4,6 +4,10 @@ import java.util.List;
 
 import org.bildit.hms.beans.Room;
 
+/**
+ * @author Ognjen Mišiæ - list of room-related methods for implementation
+ *
+ */
 public interface RoomDao {
 	// list all rooms
 List<Room> listOfRooms();

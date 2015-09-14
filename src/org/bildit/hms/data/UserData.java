@@ -14,6 +14,10 @@ import org.bildit.hms.beans.User;
 import org.bildit.hms.utility.MyConnection;
 import org.bildit.hms.utility.UserDao;
 
+/**
+ * @author Ognjen Mišiæ - implementations of the userdao interface
+ *
+ */
 public class UserData implements UserDao {
 
 	@Override
