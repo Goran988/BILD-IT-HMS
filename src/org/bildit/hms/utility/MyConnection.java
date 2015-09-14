@@ -12,7 +12,7 @@ public class MyConnection {
 	// connection username
 	private static final String USERNAME = "root";
 	// connection password
-	private static final String PASSWORD = "root";
+	private static final String PASSWORD = "Root1234";
 	// name of the database
 	private static final String DB = "bild_it_hms";
 
@@ -31,7 +31,7 @@ public class MyConnection {
 			Class.forName("com.mysql.jdbc.Driver");
 			// connection with the database "bild_it_hms"
 			connection = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/" + DB, USERNAME, PASSWORD);
+					"jdbc:mysql://localhost:3333/" + DB, USERNAME, PASSWORD);
 
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

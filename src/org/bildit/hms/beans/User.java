@@ -22,7 +22,8 @@ public class User {
 	private String userPassword;
 	private boolean isActiveGuest;
 	private boolean isLogged;
-	private byte role;
+	// 0 for admin, 1 for user, by default set it to be a regular user
+	private byte role = 1;
 	private ArrayList<Service> list;
 
 	// default constructor
